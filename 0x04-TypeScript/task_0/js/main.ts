@@ -1,18 +1,18 @@
-interface student {
+interface Student {
     firstName: string;
     lastName: string;
     age: number;
     location: string;
 }
 
-const student1: student = {
+const student1: Student = {
     firstName: "gbem gbem",
     lastName: " Okemoney",
     age: 20,
     location: "Lagos",
 }
 
-const student2: student = {
+const student2: Student = {
     firstName: "Moh",
     lastName: " Popsicle",
     age: 21,
@@ -20,9 +20,9 @@ const student2: student = {
 }
 
 
-const studentsList : student[] = [student1, student2, ]
+const studentsList : Student[] = [student1, student2, ]
 
-function renderTable(studentsss: student[]) {
+function renderTable(studentsss: Student[]) {
     const tableBody = document.querySelector("#myTable tbody") 
     console.log(tableBody)
     tableBody.innerHTML = "";
