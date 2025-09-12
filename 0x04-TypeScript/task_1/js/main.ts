@@ -21,3 +21,74 @@ console.log(teacher1);
 
 // This will throw an error because firstName is read-only
 // teacher1.firstName = "Jane"; 
+
+interface Directors {
+  readonly firstName: string; // Can only be set when initialized
+  readonly lastName: string;  // Can only be set when initialized
+  fullTimeEmployee: boolean;  // Always required
+  yearsOfExperience?: number; // Optional
+  location: string;           // Always required
+  numberOfReports: number;
+
+}
+
+const director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+
+console.log(director1);
+
+
+
+// Interface for the function
+interface printTeacherFn {
+  (firstName: string, lastName: string): string;
+}
+
+// Implementation of the function
+const printTeacher: printTeacherFn = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+// Example usage
+console.log(printTeacher("John", "Doe")); // Output: J. Doe
+console.log(printTeacher("Alice", "Smith")); // Output: A. Smith
+
+
+// Interface describing the StudentClass instance
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+// Interface describing the constructor for StudentClass
+interface StudentClassConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface;
+}
+
+// Implementation of the class
+class StudentClass implements StudentClassInterface {
+  constructor(private firstName: string, private lastName: string) {}
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+// Example usage
+const student: StudentClassInterface = new StudentClass("John", "Doe");
+console.log(student.displayName());  // Output: John
+console.log(student.workOnHomework()); // Output: Currently working
+
+
+
+
+
