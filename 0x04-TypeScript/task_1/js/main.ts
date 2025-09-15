@@ -79,7 +79,7 @@ class StudentClass {
   }
 
   displayName(): string {
-    return this.lastName;
+    return this.firstName, this.lastName;
   }
 }
 
