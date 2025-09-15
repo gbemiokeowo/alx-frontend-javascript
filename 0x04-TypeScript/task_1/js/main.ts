@@ -45,12 +45,12 @@ console.log(director1);
 
 
 // Interface for the function
-interface printTeacherFn {
+interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
 // Implementation of the function
-const printTeacher: printTeacherFn = (firstName, lastName) => {
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
