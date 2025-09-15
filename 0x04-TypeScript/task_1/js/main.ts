@@ -22,7 +22,7 @@ console.log(teacher1);
 // This will throw an error because firstName is read-only
 // teacher1.firstName = "Jane"; 
 
-interface Directors extends Teacher{
+interface Director extends Teacher {
 //   readonly firstName: string; // Can only be set when initialized
 //   readonly lastName: string;  // Can only be set when initialized
 //   fullTimeEmployee: boolean;  // Always required
