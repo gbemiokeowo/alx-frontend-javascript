@@ -71,7 +71,7 @@ interface StudentClassConstructor {
 }
 
 // Implementation of the class
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   constructor(private firstName: string, private lastName: string) {}
 
   workOnHomework(): string {
@@ -79,7 +79,7 @@ class StudentClass implements StudentClassInterface {
   }
 
   displayName(): string {
-    return this.firstName;
+    return this.lastName;
   }
 }
 
