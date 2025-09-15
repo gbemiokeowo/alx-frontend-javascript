@@ -96,3 +96,5 @@ console.log(teachClass("History")); // Output: Teaching History
 
 // The following would throw a TypeScript error:
 // console.log(teachClass("Science"));
+
+export function isDirector
